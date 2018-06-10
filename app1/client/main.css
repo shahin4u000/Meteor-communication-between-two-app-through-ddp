@@ -1,0 +1,29 @@
+/* CSS declarations go here */
+body {
+    background-color: rgba(128, 128, 128, 0.466)
+}
+.container {
+    padding: 20px;
+    background-color: white;
+    
+}
+
+
+
+.Display{
+    background-color: white;
+    display: inline-flex;
+    margin: 10px;
+    
+  
+}
+
+.miniDisplay{
+
+    border: 20px;
+    flex: 1;
+    border: 2px solid black;
+    width: 200px;
+    justify-content: flex-start;
+    align-content: space-around
+}

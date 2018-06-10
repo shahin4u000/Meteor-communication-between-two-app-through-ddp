@@ -1,0 +1,55 @@
+<head>
+  <title>app1</title>
+</head>
+
+<body>
+  {{> loginButtons }} 
+  {{#if currentUser}}
+  <div class="container">    
+    <div class="miniContainer">
+      {{> userForm}}
+    </div>
+  </div>
+    <hr>
+    <div class="Display">
+      {{#each notes}} 
+      <div class="miniDisplay">
+         {{> Display}} 
+      </div>
+      {{/each}}
+    </div>
+    {{else}}
+  <p>Please Log in</p>
+
+  {{/if}}
+
+</body>
+
+
+<template name="userForm">
+  <form class="formSubmit">
+    <label for="name">Name:</label>
+    <input required type="text" id="name" name="name" placeholder="Enter your name">
+    <br>
+
+    <label for="birthDate ">Birth Date:</label>
+    <input required type="date" id="birthDate" name="birthDate" placeholder="Enter your birth date">
+   
+    <br>
+    <input type="submit" value="Submit Form">
+  </form>
+
+</template>
+
+<template name="Display">
+  
+    <p>Name:{{name}} </p>
+    <p>Birth date : {{birthDate}} </p>
+    <br>
+  
+
+
+  <button class="userDetail">Detele &times;</button>
+  <br>
+  <br>
+</template>

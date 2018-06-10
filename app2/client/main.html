@@ -1,0 +1,21 @@
+<head>
+  <title>app2</title>
+</head>
+
+<body>
+    <div class='container'>
+      {{#each notes}} 
+        {{> Display}} 
+      {{/each}}
+    </div>
+</body>
+
+<template name="Display">
+  <div class='userDetail'>
+    <p>Name:{{name}} </p>
+    <p>Birth date : {{birthDate}} </p>
+    <br>
+  </div>
+   <br>
+  <br>
+</template>
