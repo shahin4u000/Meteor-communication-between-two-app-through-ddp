@@ -3,22 +3,23 @@
 </head>
 
 <body>
-  {{> loginButtons }} 
-  {{#if currentUser}}
-  <div class="container">    
+
+
+  {{> loginButtons }} {{#if currentUser}}
+  <div class="container">
     <div class="miniContainer">
       {{> userForm}}
     </div>
   </div>
-    <hr>
-    <div class="Display">
-      {{#each notes}} 
-      <div class="miniDisplay">
-         {{> Display}} 
-      </div>
-      {{/each}}
+  <hr>
+  <div class="Display">
+    {{#each notes}}
+    <div class="miniDisplay">
+      {{> Display}}
     </div>
-    {{else}}
+    {{/each}}
+  </div>
+  {{else}}
   <p>Please Log in</p>
 
   {{/if}}
@@ -27,26 +28,26 @@
 
 
 <template name="userForm">
-  <form class="formSubmit">
+  <form class="formSubmit form-group">
     <label for="name">Name:</label>
-    <input required type="text" id="name" name="name" placeholder="Enter your name">
+    <input required type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
     <br>
 
     <label for="birthDate ">Birth Date:</label>
-    <input required type="date" id="birthDate" name="birthDate" placeholder="Enter your birth date">
-   
+    <input required type="date" id="birthDate" class="form-control" name="birthDate" placeholder="Enter your birth date">
+
     <br>
-    <input type="submit" value="Submit Form">
+    <input type="submit" value="Submit Form" class="btn btn-primary">
   </form>
 
 </template>
 
 <template name="Display">
-  
-    <p>Name:{{name}} </p>
-    <p>Birth date : {{birthDate}} </p>
-    <br>
-  
+
+  <p>Name:{{name}} </p>
+  <p>Birth date : {{birthDate}} </p>
+  <br>
+
 
 
   <button class="userDetail">Detele &times;</button>

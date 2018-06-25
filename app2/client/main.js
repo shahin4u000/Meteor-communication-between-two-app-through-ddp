@@ -1,7 +1,9 @@
 import { Template } from "meteor/templating";
 import { Mongo } from "meteor/mongo";
 import { ReactiveVar } from "meteor/reactive-var";
-
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import { DDP } from "meteor/ddp-client";
 import "./main.html";
 

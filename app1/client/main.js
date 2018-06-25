@@ -1,6 +1,11 @@
 import { Template } from "meteor/templating";
 import { Notes } from "../lib/collection";
 import { Meteor } from "meteor/meteor";
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
 // import { ReactiveDict } from 'meteor/reactive-dict';
 import "./main.html";
 
