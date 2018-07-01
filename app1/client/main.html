@@ -3,8 +3,6 @@
 </head>
 
 <body>
-
-
   {{> loginButtons }} {{#if currentUser}}
   <div class="container">
     <div class="miniContainer">
@@ -28,7 +26,9 @@
 
 
 <template name="userForm">
-  <form class="formSubmit form-group">
+
+  {{> quickForm collection="Notes" id="insertBookForm" type="insert"}}
+  <!-- <form class="formSubmit form-group">
     <label for="name">Name:</label>
     <input required type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
     <br>
@@ -38,7 +38,7 @@
 
     <br>
     <input type="submit" value="Submit Form" class="btn btn-primary">
-  </form>
+  </form> -->
 
 </template>
 

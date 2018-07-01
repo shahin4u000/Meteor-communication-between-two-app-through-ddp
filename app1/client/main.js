@@ -1,18 +1,18 @@
 import { Template } from "meteor/templating";
-import { Notes } from "../lib/collection";
 import { Meteor } from "meteor/meteor";
+import { Notes } from "../lib/collection";
 
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-
-// import { ReactiveDict } from 'meteor/reactive-dict';
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap-theme.css";
 import "./main.html";
+
+window.Notes = Notes;
 
 Template.body.onCreated(function bodyOnCreated() {
   Meteor.subscribe("db1");
 });
-
+/* 
 Template.body.helpers({
   notes() {
     return Notes.find({});
@@ -43,3 +43,4 @@ Template.body.events({
     }
   }
 });
+ */
