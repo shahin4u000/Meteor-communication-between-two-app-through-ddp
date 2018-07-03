@@ -2,8 +2,21 @@ import { Mongo } from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
 SimpleSchema.extendOptions(["autoform"]);
 
-// Required AutoForm setup
+
 export const Notes = new Mongo.Collection("notes");
+Notes.allow({
+  insert: function(userId, doc) {
+    
+    return !! userId; 
+  },
+  update: function(userId, doc) {
+    return !! userId; 
+  },
+  remove: function(userID, doc) {
+    return doc.submittedById === Meteor.userId();
+  }
+});
+
 Notes.schema = new SimpleSchema({
   fName: {
     label: "First Name",
@@ -16,6 +29,10 @@ Notes.schema = new SimpleSchema({
   email: {
     label: "E-mail",
     type: String
+  },
+  hobby: {
+    label:"Your Hobby",
+    type:"textarea"
   }
   
 });

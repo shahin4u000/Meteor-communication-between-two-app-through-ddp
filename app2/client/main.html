@@ -12,10 +12,12 @@
 
 <template name="Display">
   <div class='userDetail'>
-    <p>Name:{{name}} </p>
-    <p>Birth date : {{birthDate}} </p>
-    <br>
+    <ul class="list-group">
+      <li class="list-group-item active">{{fName}} {{lName}}</li>
+      <li class="list-group-item disabled small">{{email}}</li>
+      <li class="list-group-item ">{{hobby}}</li>
+      
+    </ul>
   </div>
-   <br>
-  <br>
+ 
 </template>

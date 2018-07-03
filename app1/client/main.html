@@ -27,7 +27,15 @@
 
 <template name="userForm">
 
-  {{> quickForm collection="Notes" id="insertBookForm" type="insert"}}
+  <!-- {{> quickForm collection="Notes" id="insertBookForm" type="insert"}} -->
+  {{#autoForm collection="Notes" type="insert" id="userDetail"}}
+                          {{> afQuickField name="fName"  }}
+                          {{> afQuickField name="lName" }}
+                          {{> afQuickField name="email"  }}
+
+                          {{> afQuickField name="hobby" type="textarea" row=4 }}
+                          <button type="submit" class="btn btn-success">Submit </button>
+                       {{/autoForm}}
   <!-- <form class="formSubmit form-group">
     <label for="name">Name:</label>
     <input required type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
