@@ -1,18 +1,18 @@
-import { Template } from "meteor/templating";
-import { Meteor } from "meteor/meteor";
-import { Notes } from "../lib/collection";
+import { Template } from 'meteor/templating'
+import { Meteor } from 'meteor/meteor'
+import { Notes } from '../lib/collection'
 
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap-theme.css";
-import "./main.html";
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap-theme.css'
+import './main.html'
 
-window.Notes = Notes;
+window.Notes = Notes
 
-Template.body.onCreated(function bodyOnCreated() {
-  Meteor.subscribe("db1");
-});
-/* 
+Template.body.onCreated(function bodyOnCreated () {
+  Meteor.subscribe('db1')
+})
+/*
 Template.body.helpers({
   notes() {
     return Notes.find({});
