@@ -1,4 +1,5 @@
 import { Mongo } from "meteor/mongo";
+import { Meteor } from "meteor/meteor";
 import SimpleSchema from "simpl-schema";
 SimpleSchema.extendOptions(["autoform"]);
 
@@ -33,7 +34,14 @@ Notes.schema = new SimpleSchema({
   hobby: {
     label:"Your Hobby",
     type:"textarea"
-  }
+  },
+  createdByUser: {
+    type: String,
+    max: 20,
+    autoValue: function() {
+        return this.userId;
+    }
+}
   
 });
 Notes.attachSchema(Notes.schema);

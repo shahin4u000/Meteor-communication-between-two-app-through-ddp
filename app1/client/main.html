@@ -3,22 +3,25 @@
 </head>
 
 <body>
-  {{> loginButtons }} {{#if currentUser}}
-  <div class="container">
-    <div class="miniContainer">
-      {{> userForm}}
-    </div>
-  </div>
-  <hr>
-  <div class="Display">
-    {{#each notes}}
-    <div class="miniDisplay">
-      {{> Display}}
-    </div>
-    {{/each}}
-  </div>
-  {{else}}
-  <p>Please Log in</p>
+  {{> loginButtons }}
+  {{#if currentUser}}
+      <div class="container">
+        <div class="miniContainer">
+          {{> userForm}}
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="Display">
+        {{#each notes}}
+          <div class="miniDisplay">
+            {{> Display}}
+          </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p>Please Log in</p>
 
   {{/if}}
 

@@ -10,7 +10,9 @@ import './main.html'
 window.Notes = Notes
 
 Template.body.onCreated(function bodyOnCreated () {
-  Meteor.subscribe('db1')
+  Meteor.subscribe('db1');
+  Meteor.subscribe('userData');
+
 })
 /*
 Template.body.helpers({
