@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": true
+}
