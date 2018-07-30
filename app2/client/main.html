@@ -3,23 +3,37 @@
 </head>
 
 <body>    
-    
+    {{#if currentUser}}
       <div class='container'>
         {{#each notes}} 
           {{> Display}} 
         {{/each}}
       </div>
-     
+     <!--  {{else}}
+      {{> login}} -->
+     {{/if}}
 </body>
 
 <template name="Display">
   <div class='userDetail'>
     <ul class="list-group">
-      <li class="list-group-item active">{{fName}} {{lName}}</li>
+      <li class="list-group-item active">{{notes.fName}} {{lName}}</li>
       <li class="list-group-item disabled small">{{email}}</li>
       <li class="list-group-item ">{{hobby}}</li>
       
     </ul>
   </div>
  
+</template>
+
+<template name="login">
+  <h2>Login</h2>
+  <form class="login form-group" style="padding: 50px">
+      <label for="userName" > Username:</label> 
+      <input type="text" class="form-control" name="userName">
+      <label for="password"> Password:</label> 
+      <input type="password" class="form-control" name="password">
+      <br>
+      <input type="submit" class="btn btn-primary" value="Login">
+  </form>
 </template>

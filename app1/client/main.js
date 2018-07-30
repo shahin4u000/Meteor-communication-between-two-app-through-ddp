@@ -8,7 +8,9 @@ import 'bootstrap/dist/css/bootstrap-theme.css'
 import './main.html'
 
 window.Notes = Notes
-
+Accounts.ui.config({ 
+  passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL'
+});
 Template.body.onCreated(function bodyOnCreated () {
   Meteor.subscribe('db1');
   Meteor.subscribe('userData');

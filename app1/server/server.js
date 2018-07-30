@@ -17,7 +17,7 @@ Meteor.publish("db1",function() {
 
 // Server
 Meteor.publish('userData', function () {
-  if (!this.userId) {
+  if (!this.userId) {   //publish users detail to app2 if they are not logged in as per required
    return Meteor.users.find({});
   }
   
